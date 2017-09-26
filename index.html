@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jimmy Evans</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="is a writer and designer. This is his recent work.">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+</head>
+<body>
+    <div id="landing" class="landing">
+        <div id="name">`J.mmy Evans<img id="star" src="assets/kungfubaby.gif"></div>
+        <div id="aboutNav" class="nav">about_</div><div id="portfolioNav" class="nav">portfolio</div><div id="contactNav" class="nav">contact_</div></div>
+    <div id="about" class="content"> 
+            Jimmy Evans is a <span id="writer" class="reveal">writer <span class="brackets">(designer, developer)</span></span> of <span id="transmedia objects" class="reveal">transmedia objects <span class="brackets">(games, hypertext fiction, digital journalism, interactive stationary, conceptual buzzwords, horrors yet unnamed)</span></span> interested in ephemera <img id ="blossom" src="assets/cherry_blossom.gif"> and labor <img id="globe" src="assets/globe.gif">
+                <br>
+                <br>
+            Thinking about <span id="things" class="reveal">things <span class="brackets">(space, rules, affect)</span></span> at <a href = "http://www.xfdrmag.net/author/jimmy/" target="_blank">Crossfader Magazine</a>, talking about <span id="stuff" class="reveal">stuff <span class="brackets">(culture, politics, affect)</span></span> at <a href = "https://chapmanradio.com/show/1244/caps-lock-emotions" target="_blank">CAPS LOCK EMOTIONS</a>.
+                <br>
+                <br>
+            <a href = "https://www.youtube.com/watch?v=QIwGNJJgekM" target="_blank">This video</a>  explains everything.
+    </div>
+    <div id="portfolio" class="content">
+        <div id="portfolioBox" class="workBox">
+                <div id=hinukanGif class="gif">
+                <img src="assets/hinukan.gif"></div>
+                <div id=hinukan class="text">
+                    <p>
+                    <span class="reveal">Hinukan</span>
+                    <br>
+                    2017. Support by Chapman University OURCA.
+                    <br>Fractal documentary on my grandmother, a WWII survivor and member of the Okinawan diaspora.  
+                    <br>
+                    <a href = "hinukan/main.html" target="_blank">View</a>
+                    </p>
+                </div>
+            </div>
+            <div id="portfolioBox" class="workBox">
+                <div id=fircrackersGif class="gif">
+                <img src="assets/firecrackers.gif"></div>
+                <div id=firecrackers class="text">
+                    <p>
+                    <span class="reveal">Firecrackers Sound Like</span>
+                    <br>
+                    2017. Offbeat Junction.
+                    <br>
+                    Interactive poem on masculinity and memory. Broken gifs of home videotapes.
+                    <br>
+                    <a href = "firecrackerssoundlike.html" target="_blank">View</a>
+                    </p>
+                </div>
+            </div>
+             <div id="portfolioBox" class="workBox">
+                <div id=compoundFractureGif class="gif">
+                <img src="assets/compoundfracture.gif"></div>
+                <div id=compoundFracture class="text">
+                    <p>
+                    <span class="reveal">Compound Fracture</span>
+                    <br>
+                    2016. 
+                    <br>
+                    120 second long contemplative car crash drowning to death simulator. Intraspatial possibilities of words. The game cheats.
+                    <br>
+                    <a href = "compoundfracture.html" target="_blank">View</a>
+                    </p>
+                </div>
+            </div>
+         <div id="portfolioBox" class="workBox">
+                <div id=cleanRoomGif class="gif">
+                <img src="assets/cleanroom.gif"></div>
+                <div id=cleanRoom class="text">
+                    <p>
+                    <span class="reveal">June 2013, You Clean Your Room</span>
+                    <br>
+                    2016. 
+                    <br>
+                    Dedicated to everyone who signed your yearbook and is gone now. Short artifactual storytelling game.
+                    <br>
+                    <a href = "june.html" target="_blank">View</a>
+                    </p>
+                </div>
+            </div>
+         <div id="portfolioBox" class="workBox">
+                <div id=rememberGif class="gif">
+                <img src="assets/remember.gif"></div>
+                <div id=remember class="text">
+                    <p>
+                    <span class="reveal">Look to See to Remember</span>
+                    <br>
+                    2016. 
+                    <br>
+                    Find out what happened last night. Concept for an interactive poem written as you play it. 
+                    <br>
+                    <a href = "remember.html" target="_blank">View</a>
+                    </p>
+                </div>
+            </div> <div id="portfolioBox" class="workBox">
+                <div id=playPaperGif class="gif">
+                <img src="assets/playpaper.gif"></div>
+                <div id=playPaper class="text">
+                    <p>
+                    <span class="reveal">Play This Paper: Forms of Time in the Open World Branching Narrative Roleplaying Game</span>
+                    <br>
+                    2016. Undergrad thesis.
+                    <br>
+                    Article exploring philosophies of language and procedural rhetoric. Have since moved away from many of these concepts, but the formal experimentation is still indicative. 
+                    <br>
+                    <a href = "http://digitalcommons.chapman.edu/cusrd_abstracts/223/" target="_blank">View full abstract</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div id="contact" class="content">jhevans94 at gmail dot com <br>
+        <a href = "https://twitter.com/jehmbo" target="_blank">twitter</a> <a href = "https://www.instagram.com/jimmyevans/?hl=en" target="_blank">instagram</a> <a href = "strangedatastrangedata.tumblr.com" target="_blank">tumblr</a> <a href = "https://jehmbo.itch.io/" target="_blank">itch.io</a>. 
+    </div>
+</body>
+<script>
+$(document).ready(function(){
+    if ($(".landing").css("width") == "400px" ){
+        $(".landing").find(".nav").click(function () {
+            $(this).toggleClass("read");
+            $(this).siblings().removeClass("read");
+            var match = $(".nav").index(this);
+            var content = $(document).find(".content")[match];
+            $(content).toggleClass("read").find("img").toggleClass("watch");
+            $(content).siblings().removeClass("read").find("img").removeClass("watch");
+        });
+        $(".landing").find(".nav").hover(function () {
+            var match = $(".nav").index(this);
+            var content = $(document).find(".content")[match];
+            $(content).toggleClass("find");
+        });
+    } else {
+        $(".landing").find(".nav").click(function () {
+            $(this).toggleClass("read");
+            $(this).siblings().removeClass("read");
+            var match = $(".nav").index(this);
+            var content = $(document).find(".content")[match];
+            $(content).toggleClass("read").find("img").toggleClass("watch");
+            $(content).siblings().removeClass("read").find("img").removeClass("watch");
+        });
+        $(".landing").find(".nav").hover(function () {
+            $(this).toggleClass("findNav");
+            var match = $(".nav").index(this);
+            var content = $(document).find(".content")[match];
+            $(content).toggleClass("find");
+        });
+         $(".content").click(function () {
+            $(this).toggleClass("read");
+            $(this).siblings().removeClass("read");
+            $(this).find("img").toggleClass("watch");
+            $(this).siblings().find("img").removeClass("watch");
+            var match = $(".content").index(this);
+            var content = $(document).find(".nav")[match];
+            $(content).toggleClass("read");
+            $(content).siblings().removeClass("read").find("img").removeClass("watch");
+        });
+         $(".content").hover(function () {
+            $(this).toggleClass("find");
+            var match = $(".content").index(this);
+            var content = $(document).find(".nav")[match];
+            $(content).toggleClass("findNav");
+        });
+    }
+});
+</script>
+</html>
